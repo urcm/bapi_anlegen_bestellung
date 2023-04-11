@@ -141,3 +141,8 @@ types: begin of ty_podata,
          quantity   type bstmg , "10
          po_unit    type bstme, "'EA'
        end of ty_podata.
+       
+       
+data: gt_return  type standard table of bapiret2,
+      gt_poitem  type standard table of bapimepoitem,
+      gt_poitemx type standard table of bapimepoitemx.
