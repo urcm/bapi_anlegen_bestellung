@@ -155,4 +155,19 @@ data: gv_exppurchaseorder  type ebeln,
 
 *data: gt_poheader      type bapimepoheader,
 *      gt_bapimepoitem type standard table of bapimepoitem,
-*      gt_return        type standard table of bapiret2.      
+*      gt_return        type standard table of bapiret2.   
+
+
+data(gt_poheader) = value bapimepoheader(
+    comp_code            = 'DE03'
+    doc_type             = 'NB'
+    creat_date           = '09.03.2023'
+    created_by           = 'XEMIR'
+    vendor               = '0000300000'
+    langu                = 'DE'
+    langu_iso            = 'D'
+    purch_org            = 'ZM04'
+    pur_group            = '001'
+    currency             = 'EUR'
+    doc_date             = '09.03.2023'
+).
