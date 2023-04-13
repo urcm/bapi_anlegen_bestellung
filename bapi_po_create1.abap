@@ -146,3 +146,13 @@ types: begin of ty_podata,
 data: gt_return  type standard table of bapiret2,
       gt_poitem  type standard table of bapimepoitem,
       gt_poitemx type standard table of bapimepoitemx.
+      
+      
+data: gv_exppurchaseorder  type ebeln,
+      gt_expheader         type bapimepoheader,
+      gt_exppoexpimpheader type bapieikp.
+
+
+*data: gt_poheader      type bapimepoheader,
+*      gt_bapimepoitem type standard table of bapimepoitem,
+*      gt_return        type standard table of bapiret2.      
