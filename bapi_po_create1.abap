@@ -185,3 +185,14 @@ data(gt_poheaderx) = value bapimepoheaderx(
     currency             = abap_true
     doc_date             = abap_true
 ).
+
+
+gt_poitem = value #( (
+    po_item                    = '00010'
+    short_text                 = 'Staubsauger Roboter'
+    material                   = '000000000000000216'
+    plant                      = 'ZM03'
+    stge_loc                   = 'L001'
+    quantity                   = '1.0'
+    po_unit                    = 'EA'
+) ).
