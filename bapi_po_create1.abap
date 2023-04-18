@@ -171,3 +171,17 @@ data(gt_poheader) = value bapimepoheader(
     currency             = 'EUR'
     doc_date             = '09.03.2023'
 ).
+
+data(gt_poheaderx) = value bapimepoheaderx(
+    comp_code            = abap_true
+    doc_type             = abap_true
+    creat_date           = abap_true
+    created_by           = abap_true
+    vendor               = abap_true
+    langu                = abap_true
+    langu_iso            = abap_true
+    purch_org            = abap_true
+    pur_group            = abap_true
+    currency             = abap_true
+    doc_date             = abap_true
+).
