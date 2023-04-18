@@ -196,3 +196,13 @@ gt_poitem = value #( (
     quantity                   = '1.0'
     po_unit                    = 'EA'
 ) ).
+
+gt_poitemx =  value #( (
+    po_item                    = '00010'
+    short_text                 = abap_true
+    material                   = abap_true
+    plant                      = abap_true
+    stge_loc                   = abap_true
+    quantity                   = abap_true
+    po_unit                    = abap_true
+) ).
