@@ -267,3 +267,10 @@ call function 'BAPI_PO_CREATE1'
 *   invplanitem       =     " Invoicing Plan Item Data
 *   invplanitemx      =     " Invoicing Plan Item Data (Change Parameter)
   .
+
+
+if not gv_exppurchaseorder is initial.
+  call function 'BAPI_TRANSACTION_COMMIT'.
+else.
+  call function 'BAPI_TRANSACTION_ROLLBACK'.
+endif.
