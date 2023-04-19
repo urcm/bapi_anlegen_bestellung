@@ -274,3 +274,12 @@ if not gv_exppurchaseorder is initial.
 else.
   call function 'BAPI_TRANSACTION_ROLLBACK'.
 endif.
+
+
+cl_demo_output=>write_data( gt_return ).
+cl_demo_output=>write_data( gt_poitem ).
+cl_demo_output=>write_data( gt_poitemx ).
+cl_demo_output=>write_data( gv_exppurchaseorder ).
+cl_demo_output=>write_data( gt_expheader ).
+cl_demo_output=>write_data( gt_exppoexpimpheader ).
+cl_demo_output=>display(  ).
