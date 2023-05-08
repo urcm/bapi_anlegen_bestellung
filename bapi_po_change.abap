@@ -129,3 +129,6 @@
 *tables  invplanitem   Invoicing Plan Item Data
 *tables  invplanitemx   Invoicing Plan Item Data (Change Parameter)
 *tables  pohistory_ma   Transfer Structure for Purchase Order History Account Assign
+
+
+data: gv_purchaseorder type ebeln value '4500000014'.
