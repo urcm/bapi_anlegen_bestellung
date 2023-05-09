@@ -135,3 +135,7 @@ data: gv_purchaseorder type ebeln value '4500000014'.
 
 data:gt_poheader  type bapimepoheader,
      gt_poheaderx type bapimepoheaderx.
+     
+data: gt_poitem  type standard table of bapimepoitem,
+      gt_poitemx type standard table of bapimepoitemx,
+      gt_return  type standard table of bapiret2.     
