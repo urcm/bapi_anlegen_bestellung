@@ -132,3 +132,6 @@
 
 
 data: gv_purchaseorder type ebeln value '4500000014'.
+
+data:gt_poheader  type bapimepoheader,
+     gt_poheaderx type bapimepoheaderx.
