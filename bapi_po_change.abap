@@ -150,3 +150,13 @@ gt_poheader = value #( po_number    = gv_purchaseorder
                        pur_group    = '001'
                        currency     = 'EUR'
                         ).      
+gt_poheaderx = value #( po_number   = abap_true
+                       comp_code    = abap_true
+                       doc_type     = abap_true
+                       vendor       = abap_true
+                       langu        = abap_true
+                       langu_iso    = abap_true
+                       purch_org    = abap_true
+                       pur_group    = abap_true
+                       currency     = abap_true
+                        ).
