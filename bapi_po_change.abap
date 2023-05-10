@@ -160,3 +160,12 @@ gt_poheaderx = value #( po_number   = abap_true
                        pur_group    = abap_true
                        currency     = abap_true
                         ).
+
+gt_poitem = value #( (  po_item     = '00010'
+                        short_text  = 'Staubsauger Roboter'
+                        material    = '000000000000000216'
+                        plant       = 'ZM03'
+                        stge_loc    = 'L001'
+                        quantity    = '5'
+                        po_unit     = 'EA'
+                        ) ).
