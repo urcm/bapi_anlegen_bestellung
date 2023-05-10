@@ -139,3 +139,14 @@ data:gt_poheader  type bapimepoheader,
 data: gt_poitem  type standard table of bapimepoitem,
       gt_poitemx type standard table of bapimepoitemx,
       gt_return  type standard table of bapiret2.     
+      
+gt_poheader = value #( po_number    = gv_purchaseorder
+                       comp_code    = 'DE03'
+                       doc_type     = 'NB'
+                       vendor       = '0000300000'
+                       langu        = 'DE'
+                       langu_iso    = 'D'
+                       purch_org    = 'ZM04'
+                       pur_group    = '001'
+                       currency     = 'EUR'
+                        ).      
