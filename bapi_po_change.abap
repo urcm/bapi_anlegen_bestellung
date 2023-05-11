@@ -169,3 +169,69 @@ gt_poitem = value #( (  po_item     = '00010'
                         quantity    = '5'
                         po_unit     = 'EA'
                         ) ).
+
+
+call function 'BAPI_PO_CHANGE'
+  exporting
+    purchaseorder = gv_purchaseorder    " Purchasing Document Number
+    poheader      = gt_poheader    " Header Data
+    poheaderx     = gt_poheaderx    " Header Data (Change Parameter)
+*   poaddrvendor  =     " Address of Vendor
+*   testrun       =     " Test Indicator
+*   memory_uncomplete      =     " Hold Purchase Order if Faulty
+*   memory_complete        =     " Hold Purchase Order if NOT Faulty
+*   poexpimpheader         =     " Export Trade: Header Data
+*   poexpimpheaderx        =     " Foreign Trade: Change Bar: Header Data
+*   versions      =     " Version Management
+*   no_messaging  =     " No message determination
+*   no_message_req         =     " No messages necessary
+*   no_authority  =     " No Authorization Check
+*   no_price_from_po       =     " No Adoption of Price from Last Document
+*   park_uncomplete        =     " Park Document if Faulty
+*   park_complete =     " Park Document if NOT Faulty
+*  importing
+*   expheader     =     " Header Data
+*   exppoexpimpheader      =     " Export Trade: Header Data
+  tables
+    return        = gt_return     " Return Parameter
+    poitem        = gt_poitem    " Item Data
+    poitemx       = gt_poitemx    " Item Data (Change Parameter)
+*   poaddrdelivery         =     " Addresses for Inward Delivery (Item)
+*   poschedule    =     " Delivery Schedule
+*   poschedulex   =     " Delivery Schedule (Change Parameter)
+*   poaccount     =     " Account Assignment Fields
+*   poaccountprofitsegment =     " Reservation Profitability Segment: BAPI_PROFITABILITY_SEGMEN
+*   poaccountx    =     " Account Assignment Fields (Change Parameter)
+*   pocondheader  =     " Conditions (Header)
+*   pocondheaderx =     " Conditions (Header, Change Parameter)
+*   pocond        =     " Conditions (Items)
+*   pocondx       =     " Conditions (Items, Change Parameter)
+*   polimits      =     " External Services: Limits
+*   pocontractlimits       =     " External Services: Contract Limits
+*   poservices    =     " External Services: Service Lines
+*   posrvaccessvalues      =     " External Services: Account Assignment Distribution for Servi
+*   poservicestext         =     " External Services: Service Long Text
+*   extensionin   =     " Customer's Own Fields (Import Parameters)
+*   extensionout  =     " Customer's Own Fields (Export Parameters)
+*   poexpimpitem  =     " Foreign Trade: Item Data
+*   poexpimpitemx =     " Foreign Trade: Change Parameter: Item Data
+*   potextheader  =     " Header Texts
+*   potextitem    =     " Item Texts
+*   allversions   =     " All Versions (Export Parameter)
+*   popartner     =     " Partner
+*   pocomponents  =     " BAPI Structure for Components
+*   pocomponentsx =     " Update Information for Components in BUS2012 API
+*   poshipping    =     " BAPI Shipping Data for Stock Transport Orders
+*   poshippingx   =     " BAPI Shipping Data Change Parameter
+*   poshippingexp =     " Export Structure for Shipping Data
+*   pohistory     =     " Transfer Structure for PO History
+*   pohistory_totals       =     " Transfer Structure for PO History: Totals
+*   poconfirmation         =     " Transfer Structure: Display/List - Vendor Confirmation
+*   serialnumber  =     " Serial Numbers in Purchase Order BAPIs
+*   serialnumberx =     " Change Parameter: Serial Number in Purchase Order BAPIs
+*   invplanheader =     " Invoicing Plan Header Data
+*   invplanheaderx         =     " Invoicing Plan Header Data (Change Parameter)
+*   invplanitem   =     " Invoicing Plan Item Data
+*   invplanitemx  =     " Invoicing Plan Item Data (Change Parameter)
+*   pohistory_ma  =     " Transfer Structure for Purchase Order History Account Assign
+  .
