@@ -235,3 +235,10 @@ call function 'BAPI_PO_CHANGE'
 *   invplanitemx  =     " Invoicing Plan Item Data (Change Parameter)
 *   pohistory_ma  =     " Transfer Structure for Purchase Order History Account Assign
   .
+  
+  
+if not line_exists( gt_return[ type = 'E' ] ).
+  call function 'BAPI_TRANSACTION_COMMIT'.
+else.
+  call function 'BAPI_TRANSACTION_ROLLBACK'.
+endif.
