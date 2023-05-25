@@ -85,3 +85,6 @@
 *tables  invplanheader   Invoicing Plan: Header Data
 *tables  invplanitem   Invoicing Plan: Item Data
 *tables  pohistory_ma   Transfer Structure for Purchase Order History Account Assign
+
+
+data: lv_purchaseorder type ebeln value '4500000014'.
