@@ -102,3 +102,47 @@ data: gt_return            type standard table of bapiret2,
       gt_pocontractlimits  type standard table of bapiesucc,
       gt_poservices        type standard table of bapiesllc,
       gt_posrvaccessvalues type standard table of bapiesklc.
+      
+     
+call function 'BAPI_PO_GETDETAIL1'
+  exporting
+    purchaseorder     = lv_purchaseorder   " Purchasing Document Number
+*   account_assignment = SPACE    " Account Assignment Data
+*   item_text         = SPACE    " Item Text
+*   header_text       = SPACE    " Header Txt
+*   delivery_address  = SPACE    " Delivery address
+*   version           = SPACE    " Version Management
+*   services          = SPACE    " External Service Data
+*   serialnumbers     = SPACE    " Serial Numbers
+*   invoiceplan       = SPACE    " Invoicing Plan
+  importing
+    poheader          = gt_poheader    " Purchase Order Header Data
+*   poexpimpheader    =     " Foreign Trade: Export/Import: Header Data
+  tables
+    return            = gt_return    " Return Parameter(s)
+    poitem            = gt_poitem    " Purchase Order Item
+    poaddrdelivery    = gt_poaddrdelivery   " Addresses for Inward Delivery (Item)
+    poschedule        = gt_poschedule         " Delivery Schedule
+    poaccount         = gt_poaccount          " Account Assignment Fields
+    pocondheader      = gt_pocondheader       " Conditions (header)
+    pocond            = gt_pocond             " Conditions (Items)
+    polimits          = gt_polimits           " External Services: Limits
+    pocontractlimits  = gt_pocontractlimits     " Communication Structure: Contract Limits
+    poservices        = gt_poservices         " Communication Structure: Create Service Line
+    posrvaccessvalues = gt_posrvaccessvalues    " External Services: Account Assignment Distribution for Servi
+*   potextheader      =     " Header Texts
+*   potextitem        =     " Item Texts
+*   poexpimpitem      =     " Foreign Trade: Item Data
+*   pocomponents      =     " BAPI Structure for Components
+*   poshippingexp     =     " Export Structure for Shipping Data
+*   pohistory         =     " Purchase Order History
+*   pohistory_totals  =     " Purchase Order History - Totals
+*   poconfirmation    =     " Vendor Confirmation
+*   allversions       =     " Version Data
+*   popartner         =     " Partner
+*   extensionout      =     " ExtensionOut
+*   serialnumber      =     " Serial Numbers in Purchase Order BAPIs
+*   invplanheader     =     " Invoicing Plan: Header Data
+*   invplanitem       =     " Invoicing Plan: Item Data
+*   pohistory_ma      =     " Transfer Structure for Purchase Order History Account Assign
+  .
