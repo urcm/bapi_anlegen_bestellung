@@ -88,3 +88,17 @@
 
 
 data: lv_purchaseorder type ebeln value '4500000014'.
+
+data: gt_poheader type bapimepoheader.
+
+data: gt_return            type standard table of bapiret2,
+      gt_poitem            type standard table of bapimepoitem,
+      gt_poaddrdelivery    type standard table of bapimepoaddrdelivery,
+      gt_poschedule        type standard table of bapimeposchedule,
+      gt_poaccount         type standard table of bapimepoaccount,
+      gt_pocondheader      type standard table of bapimepocondheader,
+      gt_pocond            type standard table of bapimepocond,
+      gt_polimits          type standard table of bapiesuhc,
+      gt_pocontractlimits  type standard table of bapiesucc,
+      gt_poservices        type standard table of bapiesllc,
+      gt_posrvaccessvalues type standard table of bapiesklc.
