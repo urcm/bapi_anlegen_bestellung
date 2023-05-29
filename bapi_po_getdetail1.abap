@@ -146,3 +146,12 @@ call function 'BAPI_PO_GETDETAIL1'
 *   invplanitem       =     " Invoicing Plan: Item Data
 *   pohistory_ma      =     " Transfer Structure for Purchase Order History Account Assign
   .
+  
+  
+  if  gt_poheader-po_number = lv_purchaseorder .
+  cl_demo_output=>write_data( gt_return ).
+  cl_demo_output=>write_data( gt_poheader ).
+  cl_demo_output=>write_data( gt_poaddrdelivery ).
+  cl_demo_output=>write_data( gt_poschedule ).
+
+endif.
