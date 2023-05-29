@@ -153,5 +153,15 @@ call function 'BAPI_PO_GETDETAIL1'
   cl_demo_output=>write_data( gt_poheader ).
   cl_demo_output=>write_data( gt_poaddrdelivery ).
   cl_demo_output=>write_data( gt_poschedule ).
+  cl_demo_output=>write_data( gt_poaccount ).
+  cl_demo_output=>write_data( gt_pocondheader ).
+  cl_demo_output=>write_data( gt_pocond ).
+  cl_demo_output=>write_data( gt_polimits ).
+  cl_demo_output=>write_data( gt_pocontractlimits ).
+  cl_demo_output=>write_data( gt_poservices ).
+  cl_demo_output=>write_data( gt_posrvaccessvalues ).
+  cl_demo_output=>display( ).
+else.
+  message 'Es wurden keine Bestellung mit der angegebenen Nummer gefunden.' type 'I'.
 
 endif.
